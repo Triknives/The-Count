@@ -12,18 +12,17 @@ $(document).ready(function(){
     var parsedConditional = parseInt(conditional);
     var parsedCount = parseInt(count);
 
-    if (parsedIndex === 0 || index === "Nan") {
+    if (parsedIndex === NaN) {
       alert("Please enter a number in the start point field.");
     } else if (parsedConditional === 0 || parsedConditional === "NaN") {
       alert("Please enter a number in the conditional field.");
     } else if (parsedCount === 0 || parsedCount === "NaN") {
       alert("Please enter a number in the count field.");
     } else {
-        alert("we made it")
+
+      for (parsedIndex; parsedIndex <= parsedConditional; parsedIndex += parsedCount){
+          $("#output").append("<li>" + parsedIndex + "</li>");
+      }
     }
-
-
-
-    $("#output").append("<li>" + parsedIndex, parsedConditional, parsedCount + "</li>");
   });
 });
