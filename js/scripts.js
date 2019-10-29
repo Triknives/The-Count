@@ -12,11 +12,11 @@ $(document).ready(function(){
     var parsedConditional = parseInt(conditional);
     var parsedCount = parseInt(count);
 
-    if (parsedIndex === NaN) {
+    if (isNaN(parsedIndex)) {
       alert("Please enter a number in the start point field.");
-    } else if (parsedConditional === 0 || parsedConditional === "NaN") {
+    } else if (parsedConditional === 0 || isNaN(parsedConditional)) {
       alert("Please enter a number in the conditional field.");
-    } else if (parsedCount === 0 || parsedCount === "NaN") {
+    } else if (parsedCount === 0 || isNaN(parsedCount)) {
       alert("Please enter a number in the count field.");
     } else {
 
